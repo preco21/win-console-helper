@@ -1,0 +1,68 @@
+/* code by plusb preco */
+
+#ifndef PRECO_CONSOLE_COLOR_HPP
+#define PRECO_CONSOLE_COLOR_HPP
+
+// preDefinition
+#define WIN32_LEAN_AND_MEAN
+#define NOMINMAX
+
+#include <windows.h>
+
+namespace preco
+{
+	class ConsoleColor final
+	{
+	public :
+
+		enum class ConsoleTextColor
+		{
+			Black		= 0,
+			DarkBlue	= FOREGROUND_BLUE,
+			DarkGreen	= FOREGROUND_GREEN,
+			DarkCyan	= FOREGROUND_GREEN | FOREGROUND_BLUE,
+			DarkRed		= FOREGROUND_RED,
+			DarkMagenta	= FOREGROUND_RED | FOREGROUND_BLUE,
+			DarkYellow	= FOREGROUND_RED | FOREGROUND_GREEN,
+			DarkGray	= FOREGROUND_INTENSITY,
+			Gray		= FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE,
+			Blue		= FOREGROUND_INTENSITY | FOREGROUND_BLUE,
+			Green		= FOREGROUND_INTENSITY | FOREGROUND_GREEN,
+			Cyan		= FOREGROUND_INTENSITY | FOREGROUND_GREEN | FOREGROUND_BLUE,
+			Red			= FOREGROUND_INTENSITY | FOREGROUND_RED,
+			Magenta		= FOREGROUND_INTENSITY | FOREGROUND_RED | FOREGROUND_BLUE,
+			Yellow		= FOREGROUND_INTENSITY | FOREGROUND_RED | FOREGROUND_GREEN,
+			White		= FOREGROUND_INTENSITY | FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE
+		};
+
+		enum class ConsoleBackColor
+		{
+			Black		= 0,
+			DarkBlue	= BACKGROUND_BLUE,
+			DarkGreen	= BACKGROUND_GREEN,
+			DarkCyan	= BACKGROUND_GREEN | BACKGROUND_BLUE,
+			DarkRed		= BACKGROUND_RED,
+			DarkMagenta	= BACKGROUND_RED | BACKGROUND_BLUE,
+			DarkYellow	= BACKGROUND_RED | BACKGROUND_GREEN,
+			DarkGray	= BACKGROUND_INTENSITY,
+			Gray		= BACKGROUND_RED | BACKGROUND_GREEN | BACKGROUND_BLUE,
+			Blue		= BACKGROUND_INTENSITY | BACKGROUND_BLUE,
+			Green		= BACKGROUND_INTENSITY | BACKGROUND_GREEN,
+			Cyan		= BACKGROUND_INTENSITY | BACKGROUND_GREEN | BACKGROUND_BLUE,
+			Red			= BACKGROUND_INTENSITY | BACKGROUND_RED,
+			Magenta		= BACKGROUND_INTENSITY | BACKGROUND_RED | BACKGROUND_BLUE,
+			Yellow		= BACKGROUND_INTENSITY | BACKGROUND_RED | BACKGROUND_GREEN,
+			White		= BACKGROUND_INTENSITY | BACKGROUND_RED | BACKGROUND_GREEN | BACKGROUND_BLUE
+		};
+
+		// 소멸자 삭제
+		~ConsoleColor() = delete;
+	
+		// 콘솔의 텍스트 및 배경 색을 바꿉니다
+		// Clear를 하지않으면 전체적인 색 초기화가 되지 않습니다
+		static void changeConsoleColor(ConsoleTextColor consoleTextColor, ConsoleBackColor consoleBackGroundColor = ConsoleBackColor::Black);
+	};
+
+} // namespace preco
+
+#endif // PRECO_CONSOLE_COLOR_HPP
