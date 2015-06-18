@@ -1,14 +1,12 @@
-﻿/* code by plusb preco */
-
-#ifndef PRECO_CONSOLE_MANIP_HPP
+﻿#ifndef PRECO_CONSOLE_MANIP_HPP
 #define PRECO_CONSOLE_MANIP_HPP
 
-// preDefinition
+// Pre definition.
 #define WIN32_LEAN_AND_MEAN
 #define NOMINMAX
 //#define _WIN32_WINNT 0x0500
 
-#include "PrecoHelper/Vector2.hpp"
+#include "PHelper/Vector2.hpp"
 #include <windows.h>
 
 namespace preco
