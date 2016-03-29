@@ -1,4 +1,9 @@
 # win-console-helper
-C++ windows console application helper class
 
-__You need VS2013 or upper version__
+C++ windows console application helper classes
+
+__You need VS2013 or latest version__
+
+## License
+
+Public Domain
