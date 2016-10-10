@@ -6,4 +6,4 @@ __You need VS2013 or latest version__
 
 ## License
 
-CC0 (Public Domain)
+[Public Domain](http://unlicense.org/)
